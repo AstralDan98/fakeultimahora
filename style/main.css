@@ -1,0 +1,314 @@
+/*====================
+=======Structure======
+======================*/
+
+body{
+    background-color: rgb(255, 255, 255);
+    display:flex; 
+    flex-direction:column;    
+    margin: 1em auto;
+    min-height: 100vh;
+    width: 90%;
+}
+
+header{
+    margin:0%;
+    padding: 0%;
+    height: 10vh;
+    width:100%;
+    display: flex;  
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    position:relative;
+    z-index: 1000;
+}
+
+
+main{
+    margin: 1em 0;
+    width: 100%;
+}
+
+footer{
+    margin-top: auto; 
+    width: 100%;
+}
+
+.main-element{
+    margin-bottom: 2em;
+}
+
+.footer-element{
+    margin-bottom: 1em;
+}
+
+/*====================
+======Typography======
+======================*/
+
+h1, h2, h3, h4, h5, h6, p{
+    color: hsl(0, 0%, 100%);
+}
+
+a{
+    color:rgb(0, 0, 0)
+}
+
+h1, h2, h3, h4 {
+    font-family: "Ubuntu";
+}
+
+h5, h6 {
+    font-family: "Ubuntu Condensed";
+}
+
+a, td, p, button{
+    font-family: "Ubuntu";
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:focus, a:hover {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
+}
+
+/*====================
+========Image=========
+======================*/
+
+img {
+    max-width: 100%;
+}
+
+/*====================
+========Logo=========
+======================*/
+
+.logo{
+    margin: 0 auto;    
+}
+.logo svg{
+    height: 3em;
+    width: 100%;
+}
+
+.logo svg path{
+    fill:rgb(255, 255, 255);
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+/*====================
+========HEADER========
+======================*/
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list-01 ul {
+    margin: 0 2em;
+    font-size: .7rem;
+    padding: 0.3rem 0;
+}
+.list-02 ul {
+    margin: 0 2em;
+    font-size: .7rem;
+    padding: 0.3rem 0;
+}
+.list-inline-item:hover{
+    cursor: pointer;
+}
+
+.list-inline{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    text-align: center;
+}
+.list-inline-item{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: initial;
+    display:inline-block;
+}
+.list-01 .list-inline-item:first-child{
+    color: rgb(204, 36, 36); 
+}
+.navbar-top{
+    background-color: rgb(202, 202, 202);
+}
+.top_nav{
+    width: 100%;
+    position: relative;
+}
+
+.navbar .containter{ 
+    position:relative
+}
+
+.navbar .container{ 
+    display:flex;
+    padding: 0.6rem 0.2rem;
+    background-color: rgb(204, 36, 36);
+    position: initial;
+}
+
+/*====================
+====NAVBAR-EXPAND=====
+======================*/
+
+.nav-item svg{ 
+    width: 100%;
+    height: 2em;
+}
+
+.navbar-menu .container{ 
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: -15px;
+    padding-left: -15px;
+    width: 100%;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    background-color: rgb(218, 218, 218);
+}
+
+.navbar-menu ul {
+    margin: 0.5em 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/*====================
+=====BURGER MENU======
+======================*/
+.hamburger-menu{
+    display: block;
+    width: 32px;
+    height: 27px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer
+}
+ 
+.hamburger-menu:hover{
+    cursor: pointer;
+}
+
+.hamburger-menu span:nth-child(1) .hamburger-menu span:nth-child(2) {
+    top: 0
+}
+
+.hamburger-menu span:nth-child(3) .hamburger-menu span:nth-child(4) {
+    top: 11px
+}
+
+.hamburger-menu span:nth-child(5) .hamburger-menu span:nth-child(6) {
+    top: 22px
+}
+
+.hamburger-menu span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 9px 9px 0;
+}
+
+.hamburger-menu span:nth-child(odd) {
+    left: 0%;
+    border-radius: 9px 0 0 9px;
+}
+.hamburger-menu span{
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 50%;
+    background-color: #fff;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.navbar-nav #hamburger-menu{
+    top: 10em;
+    position:absolute;
+    background:rgb(255, 255, 255) none repeat 0% 0%;
+    left: 0px;
+    width: 100%;
+    z-index: 1030;
+    border-bottom: solid 2px rgb(204, 36, 36);
+    background-color:rgb(0, 0, 0);
+    color: rgb(202, 202, 202);
+
+}
+
+/*====================
+========BUTTONS=======
+======================*/
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: rgb(218, 218, 218);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: ce;
+    color: rgb(0, 0, 0);
+    margin-right: 0.5em;
+}
+
+.login svg{
+    width: 20%;
+    height: 2em;
+}
+
+.registration{
+    background-color: rgb(248, 196, 26);
+    color: rgb(0, 0, 0);
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+
