@@ -4,26 +4,17 @@
 
 body{
     background-color: rgb(255, 255, 255);
-    display:flex; 
     flex-direction:column;    
-    margin: 1em auto;
     min-height: 100vh;
-    width: 90%;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
 }
 
 header{
-    margin:0%;
-    padding: 0%;
-    height: 10vh;
     width:100%;
-    display: flex;  
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
-    position:relative;
-    z-index: 1000;
 }
-
 
 main{
     margin: 1em 0;
@@ -48,7 +39,7 @@ footer{
 ======================*/
 
 h1, h2, h3, h4, h5, h6, p{
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
 a{
@@ -56,15 +47,15 @@ a{
 }
 
 h1, h2, h3, h4 {
-    font-family: "Ubuntu";
+    font-family: "Roboto";
 }
 
 h5, h6 {
-    font-family: "Ubuntu Condensed";
+    font-family: "Roboto Condensed";
 }
 
 a, td, p, button{
-    font-family: "Ubuntu";
+    font-family: "Roboto";
 }
 
 h1 {
@@ -99,216 +90,263 @@ a:focus, a:hover {
     text-decoration: none;
 }
 
-/*====================
-========Image=========
-======================*/
-
-img {
-    max-width: 100%;
-}
 
 /*====================
-========Logo=========
+======NAVBAR-TOP======
 ======================*/
 
-.logo{
-    margin: 0 auto;    
-}
-.logo svg{
-    height: 3em;
+.navbar-top{
+    background-color: rgb(202, 202, 202);
+    height: 3vh;
     width: 100%;
 }
 
-.logo svg path{
-    fill:rgb(255, 255, 255);
+.navbar-top .element{
+    width: 100%;
 }
-
-.logo:hover{
-    cursor: pointer;
-}
-
-
-/*====================
-========HEADER========
-======================*/
-
 .row{
-    display:flex;
-    flex-wrap: wrap;
+    display: flex;
+    margin: 0 20%;
     justify-content: space-between;
 }
 
-.list-01 ul {
-    margin: 0 2em;
-    font-size: .7rem;
-    padding: 0.3rem 0;
+.row ul {
+    font-size: 0.7rem;
 }
-.list-02 ul {
-    margin: 0 2em;
-    font-size: .7rem;
-    padding: 0.3rem 0;
+
+.row__element-today-news{
+    display: block;
 }
+
 .list-inline-item:hover{
     cursor: pointer;
 }
 
-.list-inline{
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    text-align: center;
-}
 .list-inline-item{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: initial;
     display:inline-block;
 }
-.list-01 .list-inline-item:first-child{
-    color: rgb(204, 36, 36); 
-}
-.navbar-top{
-    background-color: rgb(202, 202, 202);
-}
-.top_nav{
-    width: 100%;
-    position: relative;
-}
 
-.navbar .containter{ 
-    position:relative
-}
-
-.navbar .container{ 
-    display:flex;
-    padding: 0.6rem 0.2rem;
-    background-color: rgb(204, 36, 36);
-    position: initial;
+.row__element-today-news .list-inline-item:first-child{
+    color: rgb(187, 11, 11);
+    font-weight: bold; 
 }
 
 /*====================
-====NAVBAR-EXPAND=====
+========NAVBAR========
 ======================*/
 
-.nav-item svg{ 
-    width: 100%;
-    height: 2em;
-}
-
-.navbar-menu .container{ 
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: -15px;
-    padding-left: -15px;
-    width: 100%;
-}
-
-.navbar-nav{
+.navbar{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    list-style: none;
-    margin-bottom: 0;
-    padding-left: 0;
+    background-color: rgb(187, 6, 6);
+    height: 10vh;
+    width: 100%;
+}
+.navbar .element{ 
+    display:flex;
+    position: initial;
+    width: 60%;
+    margin: auto 20%;
+}
+
+/*====================
+=====NAVBAR BRAND=====
+======================*/
+
+.navbar-brand{
+    line-height: inherit;
+    white-space: nowrap;
+    margin: auto;
+    width: 30%;
+}
+
+.navbar-brand svg path{
+    fill:rgb(255, 255, 255);
+}
+
+.navbar-brand:hover{
+    cursor: pointer;
+}
+
+/*====================
+=====NAVBAR MENU======
+======================*/
+
+.navbar-menu{
+    width: 100%;    
     background-color: rgb(218, 218, 218);
 }
 
 .navbar-menu ul {
-    margin: 0.5em 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    width: 60%;
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu ul li{
+    margin: auto 0;
+}
+
+.navbar-menu svg path{
+    fill: rgb(0, 0, 0);
+}
+
+.navbar-menu svg{
+    width: 2em;
 }
 
 /*====================
-=====BURGER MENU======
+=====BURGER ICON======
 ======================*/
-.hamburger-menu{
-    display: block;
-    width: 32px;
-    height: 27px;
-    position: relative;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer
+
+.hamburger-menu-draw{
+    margin: auto 0;
 }
- 
-.hamburger-menu:hover{
+
+.hamburger-menu-draw:hover{
     cursor: pointer;
 }
 
-.hamburger-menu span:nth-child(1) .hamburger-menu span:nth-child(2) {
-    top: 0
-}
-
-.hamburger-menu span:nth-child(3) .hamburger-menu span:nth-child(4) {
-    top: 11px
-}
-
-.hamburger-menu span:nth-child(5) .hamburger-menu span:nth-child(6) {
-    top: 22px
-}
-
-.hamburger-menu span:nth-child(even) {
-    left: 50%;
-    border-radius: 0 9px 9px 0;
-}
-
-.hamburger-menu span:nth-child(odd) {
-    left: 0%;
-    border-radius: 9px 0 0 9px;
-}
-.hamburger-menu span{
+.hamburger-menu-draw span{
     display: block;
-    position: absolute;
-    height: 5px;
-    width: 50%;
-    background-color: #fff;
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    width: 2.5em;
+    height: 0.5vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.2em;
+    margin-bottom: 0.5em;
 }
-.navbar-nav #hamburger-menu{
-    top: 10em;
-    position:absolute;
-    background:rgb(255, 255, 255) none repeat 0% 0%;
-    left: 0px;
-    width: 100%;
-    z-index: 1030;
-    border-bottom: solid 2px rgb(204, 36, 36);
-    background-color:rgb(0, 0, 0);
-    color: rgb(202, 202, 202);
 
+/*=====================
+===SUBMENU SEARCHBAR===
+=======================*/
+
+.hamburger-menu__element-searchbar{
+    margin-top: 0.5em;
+    padding: 0.5;
+    padding-left: 2em;
+}
+
+.hamburger-menu__element-searchbar form svg path{
+    fill:rgb(255, 255, 255);
+}
+.hamburger-menu__element-searchbar form svg{
+    width: 1em;
+}
+.hamburger-menu__element-searchbar form svg{
+    cursor: pointer;
+}
+
+.hamburger-menu__element-searchbar input{
+    background-color: rgb(78, 78, 78);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding-left: 1em;
 }
 
 /*====================
-========BUTTONS=======
+========SUBMENU=======
 ======================*/
 
-.login{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    background-color: rgb(218, 218, 218);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: ce;
-    color: rgb(0, 0, 0);
-    margin-right: 0.5em;
+.hamburger-menu{
+    position: fixed;
+    width: 35em;
+    background: rgb(78, 78, 78);
+    margin-top: 8vh;
+    color: rgb(255, 255, 255);
 }
 
-.login svg{
+.hamburger-menu__element-submenu{
+    background-color: rgb(49, 49, 49);
+}
+
+.hamburger-menu__element-submenu-button button{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background-color: rgb(49, 49, 49);
+    border: none;
+    padding: 0.5em;
+    padding-left: 2em;
+}
+.hamburger-menu__element-submenu-button button:hover{
+    cursor: pointer;
+}
+
+/*====================
+=====SOCIAL MEDIA=====
+======================*/
+
+.hamburger-menu__element-social-networks .hamburger-menu__contact-info{
+    background-color: rgb(49, 49, 49);
+}
+
+ul.inline{
+    margin: 2em;
+}
+
+.hamburger-menu__element-social-networks ul.incline li a svg path{
+    fill: rgb(255, 255, 255);
+}
+
+/*====================
+=====USER ACCESS======
+======================*/
+
+.user-access{
+    display: flex;
+    gap: 0.5em;
+    margin: auto 0;
+}
+
+.user-access button{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0); 
+    border-radius: 0.25em;
+}
+.user-access__button-login span{
+    vertical-align: super;
+}
+
+.user-access__button-login{
+    font-size: 0.85em;
+    font-weight: 400;
+    background-color: rgb(218, 218, 218);
+    border-color: rgb(218, 218, 218);
+}
+
+.user-access__button-login:hover{
+    background-color:   rgb(156, 156, 156);
+    border-color:   rgb(156, 156, 156);
+}
+
+.user-access__button-login svg{
     width: 20%;
     height: 2em;
 }
 
-.registration{
-    background-color: rgb(248, 196, 26);
-    color: rgb(0, 0, 0);
-    font-family:'Courier New', Courier, monospace;
+.user-access__button-register{
+    background-color: rgb(233, 183, 48);
     font-style: italic;
 }
 
 
+/*====================
+========Footer========
+======================*/
+
+
+.footer-element{
+    width: 100%;
+}
+
+.footer-element p{
+    text-align: center;
+}
+
+.author p:hover{
+    color:hsl(0, 92%, 35%)
+}
