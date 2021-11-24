@@ -257,19 +257,37 @@ a:focus, a:hover {
     background: rgb(78, 78, 78);
     margin-top: 8vh;
     color: rgb(255, 255, 255);
+    border-bottom: 0.3em solid rgb(212, 3, 3);
 }
 
 .hamburger-menu__element-submenu{
     background-color: rgb(49, 49, 49);
 }
 
+.hamburger-menu__element-submenu-button{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+    border-bottom: 0.1em solid rgb(78, 78, 78)
+}
+
 .hamburger-menu__element-submenu-button button{
+    width: 100%;
     color: rgb(255, 255, 255);
+    font-weight: bold;
     text-transform: uppercase;
     background-color: rgb(49, 49, 49);
-    border: none;
+    border: none;;
     padding: 0.5em;
     padding-left: 2em;
+
+}
+
+.hamburger-menu__element-submenu-button span{
+    color:rgb(212, 3, 3);
+    font-weight: 3em;
+    font-family: "Roboto";
+    margin: 0.5em 2em 0 0;
 }
 .hamburger-menu__element-submenu-button button:hover{
     cursor: pointer;
@@ -278,10 +296,6 @@ a:focus, a:hover {
 /*====================
 =====SOCIAL MEDIA=====
 ======================*/
-
-.hamburger-menu__element-social-networks .hamburger-menu__contact-info{
-    background-color: rgb(49, 49, 49);
-}
 
 .hamburger-menu__element-social-networks ul.inline{
     display: flex;
@@ -292,16 +306,51 @@ a:focus, a:hover {
 }
 
 .hamburger-menu__element-social-networks ul.inline svg{
-    width: 40%;
+    width: 2em;
 }
 
-.hamburger-menu__element-social-networks ul.inline svg{
-    width: 40%;
+.hamburger-menu__element-social-networks ul.inline li{
+    margin-right: 1em;
 }
+
 
 .hamburger-menu__element-social-networks ul.inline svg path{
     fill: rgb(255, 255, 255);
 }
+
+/*====================
+=====CONTACT INFO=====
+======================*/
+
+.hamburger-menu__element-contact-info{
+    display: flex;
+    flex-direction: row;
+    font-family: "Roboto";
+    margin: 0 0 2em 1em;
+}
+
+.hamburger-menu__element-contact-info-adds:hover{
+    cursor: pointer;
+}
+
+.hamburger-menu__element-contact-info-adds{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(228, 228, 228);
+    border-right: 1px solid rgb(187, 11, 11);
+}
+
+.hamburger-menu__element-contact-info-contact:hover{
+    cursor: pointer;
+}
+
+.hamburger-menu__element-contact-info-contact{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(228, 228, 228);
+    border-left: 1px solid rgb(228, 228, 228);
+}
+
 
 /*====================
 =====USER ACCESS======
