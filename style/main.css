@@ -283,11 +283,23 @@ a:focus, a:hover {
     background-color: rgb(49, 49, 49);
 }
 
-ul.inline{
+.hamburger-menu__element-social-networks ul.inline{
+    display: flex;
+    align-items: center;
     margin: 2em;
+    font-family: "Roboto";
+    font-size: small;
 }
 
-.hamburger-menu__element-social-networks ul.incline li a svg path{
+.hamburger-menu__element-social-networks ul.inline svg{
+    width: 40%;
+}
+
+.hamburger-menu__element-social-networks ul.inline svg{
+    width: 40%;
+}
+
+.hamburger-menu__element-social-networks ul.inline svg path{
     fill: rgb(255, 255, 255);
 }
 
