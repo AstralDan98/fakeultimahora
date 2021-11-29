@@ -1,0 +1,37 @@
+.news{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 20%;
+    font-family: $font-stack;
+    
+    
+    @include respond-to("lg") {
+        width: 75%;
+    }
+    
+    h2:hover{
+        cursor: pointer;
+        color: $color-primary;
+    }
+
+    .writer{
+        margin-top: 1vh;
+        font-size: 1em;
+    }
+}
+
+.main-news{
+    display: flex;
+    width: 60%;
+    margin: 0 10%;
+    flex-direction: column;
+}
+
+
+.secondary-news{
+    display: flex;
+    width: 40%;
+    margin: 0 10;
+}
+

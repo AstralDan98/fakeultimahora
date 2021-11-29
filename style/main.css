@@ -104,17 +104,17 @@ a:focus, a:hover {
 .navbar-top .element{
     width: 100%;
 }
-.row{
+.top-bar{
     display: flex;
     margin: 0 20%;
     justify-content: space-between;
 }
 
-.row ul {
+.top-bar ul {
     font-size: 0.7rem;
 }
 
-.row__element-today-news{
+.top-bar__element-today-news{
     display: block;
 }
 
@@ -128,7 +128,7 @@ a:focus, a:hover {
     display:inline-block;
 }
 
-.row__element-today-news .list-inline-item:first-child{
+.top-bar__element-today-news .list-inline-item:first-child{
     color: rgb(187, 11, 11);
     font-weight: bold; 
 }
@@ -202,15 +202,15 @@ a:focus, a:hover {
 =====BURGER ICON======
 ======================*/
 
-.hamburger-menu-draw{
+.hamburguer-button{
     margin: auto 0;
 }
 
-.hamburger-menu-draw:hover{
+.hamburguer-button:hover{
     cursor: pointer;
 }
 
-.hamburger-menu-draw span{
+.hamburguer-button span{
     display: block;
     width: 2.5em;
     height: 0.5vh;
@@ -224,23 +224,23 @@ a:focus, a:hover {
 ===SUBMENU SEARCHBAR===
 =======================*/
 
-.hamburger-menu__element-searchbar{
+.hamburguer-menu__element-searchbar{
     margin-top: 0.5em;
     padding: 0.5;
     padding-left: 2em;
 }
 
-.hamburger-menu__element-searchbar form svg path{
+.hamburguer-menu__element-searchbar form svg path{
     fill:rgb(255, 255, 255);
 }
-.hamburger-menu__element-searchbar form svg{
+.hamburguer-menu__element-searchbar form svg{
     width: 1em;
 }
-.hamburger-menu__element-searchbar form svg{
+.hamburguer-menu__element-searchbar form svg{
     cursor: pointer;
 }
 
-.hamburger-menu__element-searchbar input{
+.hamburguer-menu__element-searchbar input{
     background-color: rgb(78, 78, 78);
     border: none;
     color: rgb(255, 255, 255);
@@ -251,7 +251,7 @@ a:focus, a:hover {
 ========SUBMENU=======
 ======================*/
 
-.hamburger-menu{
+.hamburguer-menu{
     position: fixed;
     width: 35em;
     background: rgb(78, 78, 78);
@@ -260,18 +260,18 @@ a:focus, a:hover {
     border-bottom: 0.3em solid rgb(212, 3, 3);
 }
 
-.hamburger-menu__element-submenu{
+.hamburguer-menu__element-submenu{
     background-color: rgb(49, 49, 49);
 }
 
-.hamburger-menu__element-submenu-button{
+.hamburguer-menu__element-submenu-button{
     display: flex;
     justify-content: space-between;
     vertical-align: center;
-    border-bottom: 0.1em solid rgb(78, 78, 78)
+    border-bottom: 0.1em solid hsl(0, 0%, 31%)
 }
 
-.hamburger-menu__element-submenu-button button{
+.hamburguer-menu__element-submenu-button button{
     width: 100%;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -283,13 +283,13 @@ a:focus, a:hover {
 
 }
 
-.hamburger-menu__element-submenu-button span{
+.hamburguer-menu__element-submenu-button span{
     color:rgb(212, 3, 3);
     font-weight: 3em;
     font-family: "Roboto";
     margin: 0.5em 2em 0 0;
 }
-.hamburger-menu__element-submenu-button button:hover{
+.hamburguer-menu__element-submenu-button button:hover{
     cursor: pointer;
 }
 
@@ -297,7 +297,7 @@ a:focus, a:hover {
 =====SOCIAL MEDIA=====
 ======================*/
 
-.hamburger-menu__element-social-networks ul.inline{
+.hamburguer-menu__element-social-networks ul.inline{
     display: flex;
     align-items: center;
     margin: 2em;
@@ -305,16 +305,16 @@ a:focus, a:hover {
     font-size: small;
 }
 
-.hamburger-menu__element-social-networks ul.inline svg{
+.hamburguer-menu__element-social-networks ul.inline svg{
     width: 2em;
 }
 
-.hamburger-menu__element-social-networks ul.inline li{
+.hamburguer-menu__element-social-networks ul.inline li{
     margin-right: 1em;
 }
 
 
-.hamburger-menu__element-social-networks ul.inline svg path{
+.hamburguer-menu__element-social-networks ul.inline svg path{
     fill: rgb(255, 255, 255);
 }
 
@@ -322,29 +322,29 @@ a:focus, a:hover {
 =====CONTACT INFO=====
 ======================*/
 
-.hamburger-menu__element-contact-info{
+.hamburguer-menu__element-contact-info{
     display: flex;
     flex-direction: row;
     font-family: "Roboto";
     margin: 0 0 2em 1em;
 }
 
-.hamburger-menu__element-contact-info-adds:hover{
+.hamburguer-menu__element-contact-info-adds:hover{
     cursor: pointer;
 }
 
-.hamburger-menu__element-contact-info-adds{
+.hamburguer-menu__element-contact-info-adds{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: rgb(228, 228, 228);
     border-right: 1px solid rgb(187, 11, 11);
 }
 
-.hamburger-menu__element-contact-info-contact:hover{
+.hamburguer-menu__element-contact-info-contact:hover{
     cursor: pointer;
 }
 
-.hamburger-menu__element-contact-info-contact{
+.hamburguer-menu__element-contact-info-contact{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: rgb(228, 228, 228);
@@ -380,6 +380,7 @@ a:focus, a:hover {
 }
 
 .user-access__button-login:hover{
+    cursor: pointer;
     background-color:   rgb(156, 156, 156);
     border-color:   rgb(156, 156, 156);
 }
@@ -390,8 +391,66 @@ a:focus, a:hover {
 }
 
 .user-access__button-register{
-    background-color: rgb(233, 183, 48);
+    background-color: hsl(44, 81%, 55%);
     font-style: italic;
+}
+
+.user-access__button-register:hover{
+    cursor: pointer;
+    background-color: hsl(44, 81%, 40%);
+    border-color: hsl(44, 81%, 40%);
+}
+
+
+
+/*====================
+=========NEWS=========
+======================*/
+
+.threat{
+    color: rgb(212, 3, 3);    
+}
+
+.news h2{
+    font-size: 3em;
+}
+
+.news h2:hover{
+    cursor: pointer;
+    color:rgb(245, 11, 11);
+}
+
+.news h3:hover{
+    cursor: pointer;
+    color: rgb(245, 11, 11) ;
+}
+
+.news .writer{
+    margin-top: 1vh;
+    font-size: 1em;
+}
+
+.news{
+    font-family: "Roboto";
+    display: flex;
+    width: 60%;
+    margin: 0 20%;
+    justify-content: space-between;
+}
+
+.main-news{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.secondary-news{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    max-width: 40%;
+    margin-left: 10%;
+}
 }
 
 
@@ -410,4 +469,20 @@ a:focus, a:hover {
 
 .author p:hover{
     color:hsl(0, 92%, 35%)
+}
+
+
+/*====================
+=========ADDS=========
+======================*/
+
+
+.ads{
+    align-content: top;
+}
+
+.addsbygoogle{
+    display: inline-block;
+    width: 100%;
+    height: 10em;
 }

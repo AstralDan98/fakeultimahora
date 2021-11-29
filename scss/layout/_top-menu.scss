@@ -1,0 +1,36 @@
+.navbar-top{
+    background-color: $grey;
+    height: 3vh;
+    width: 100%;
+
+    .element{ 
+        width: 100%;
+    }
+
+    .top-bar{
+        display: flex;
+        margin: 0 20%;
+        justify-content: space-between;
+
+        ul{
+            font-size: 0.7em;
+        }
+
+        .top-bar__element-today-news{
+            display: block;
+        }
+    }
+
+    .list-inline-item{
+        cursor: pointer;
+        font-family: $font-stack-condensed;
+        font-weight: initial;
+        display: inline-block;
+    }
+
+    .top-bar__element-today-news .list-inline-item:first-child{
+        color: $color-primary;
+        font-weight: bold;
+    }
+
+}

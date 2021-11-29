@@ -1,0 +1,22 @@
+.ad__full-screen{
+    margin: 1rem auto;
+    width: 80%;
+
+    @include respond-to("lg") {
+        width: 100%;
+    }
+}
+
+.ad__sidebar{
+    
+    width: 30%;
+
+    @include respond-to("lg") {
+        width: 25%;
+    }
+
+    img{
+        position: sticky;
+        top: 16vh;
+    }
+}
