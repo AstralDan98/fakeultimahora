@@ -3,10 +3,6 @@
     cursor: pointer;
     margin: auto 0;
 
-    @include respond-to("lg") {
-        width: 3rem;
-    }
-
     span{
         display: block;
         width: 2.5em;
@@ -18,14 +14,18 @@
     }
 }
 
-.hamburguer__menu{
+.hamburguer-menu{
     position: fixed;
     width: 35em;
+    top: -85vh;
     background: $black-brightest;
-    margin-top: 8vh;
     color: $white;
     border-bottom: 0.3em solid $color-primary;
+    transition: 0.3s top;
 
+    &.--active{
+        top: 17vh;
+    }
 
     .hamburguer-menu__element-searchbar{
 
@@ -67,7 +67,6 @@
     .hamburguer-menu__element-submenu-button{
         display: flex;
         justify-content: space-between;
-        vertical-align: center;
         border-bottom: 0.1em solid $black-brightest;
 
         button{
@@ -120,20 +119,37 @@
         flex-direction: row;
         font-family: $font-stack;
         margin: 0 0 2em 1em;
-        background-color: $black-brightest;
-        color: $white;
-        border: none; 
 
         .hamburguer-menu__element-contact-info-adds{
             cursor: pointer;                     
-            border-right: 1px solid $color-primary-darker;
-            
+            border: 0;
+            border-right: 1px solid $color-primary-darker;    
+            background: none;
+            color: $white;
         }
 
         .hamburguer-menu__element-contact-info-contact{
             cursor: pointer;
+            border: 0;
             border-left: 1px solid $white;
+            background: none;
+            color: $white;
             
         }
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $black;
+    opacity: 0;
+    transition: 0.3s opacity;
+
+    &.--active{
+        opacity: 0.5;
     }
 }

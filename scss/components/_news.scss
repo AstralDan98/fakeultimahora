@@ -31,7 +31,6 @@
 
 .secondary-news{
     display: flex;
-    width: 40%;
-    margin: 0 10;
+    flex-direction: column;
 }
 
